@@ -27,7 +27,9 @@ sudo apt-get install libopencv-dev
 
 Compile which program you want to use. 
 
-`gcc -o timelapse_mp4 timelapse_mp4.c `pkg-config --cflags --libs opencv4`
+```
+gcc -o timelapse_mp4 timelapse_mp4.c `pkg-config --cflags --libs opencv4`
+```
 
 Run this in terminal:
 
@@ -41,7 +43,7 @@ So if using the mp4 file, and you want to capture every 5 seconds for an hour:
 ./timelapse_mp4 0 5 3600
 ```
 
-Note: If 0 for <device number> does not work, try 2 or plugging into another usb slot.
+Note: If 0 for `<device number>` does not work, try 2 or plugging into another usb slot.
 
 
 ## Optional Streaming
@@ -55,7 +57,7 @@ sudo apt-get update
 sudo apt-get install cmake libjpeg8-dev gcc g++ git
 ```
 
-- Clone the `mjpg-streamer` repo and built it
+- Clone the `mjpg-streamer` repo and build it
 
 ```
 git clone https://github.com/jacksonliam/mjpg-streamer.git
