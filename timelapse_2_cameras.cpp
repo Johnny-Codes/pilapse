@@ -1,3 +1,5 @@
+// Threading currently does not work. They record sequentially. Debugging it
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <thread> // For std::thread
