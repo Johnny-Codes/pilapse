@@ -79,3 +79,7 @@ http://your_pi_ip_address:8080
 ```
 
 - Press CTRL+C to stop the streaming once the camera is where you want it to be.
+
+## Timelapse Calculator
+
+This is a pretty neat calculator that you can use to figure out `clip length`, `shooting interval`, or `event duration` - https://www.photopills.com/calculators/timelapse
