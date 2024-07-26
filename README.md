@@ -28,19 +28,19 @@ sudo apt-get install libopencv-dev
 Compile which program you want to use. 
 
 ```
-gcc -o timelapse_mp4 timelapse_mp4.c `pkg-config --cflags --libs opencv4`
+g++ -o timelapse_mp4 timelapse_mp4.c `pkg-config --cflags --libs opencv4`
 ```
 
 Run this in terminal:
 
 ```
-./<program name> <device number> <capture interval> <total duration>
+./<program name> <device number> <capture interval> <total duration> <filename with extension>
 ```
 
-So if using the mp4 file, and you want to capture every 5 seconds for an hour:
+So if using the mp4 file, and you want to capture every 5 seconds for an hour and save it as sunset.mp4:
 
 ```
-./timelapse_mp4 0 5 3600
+./timelapse_mp4 0 5 3600 sunset.mp4
 ```
 
 Note: If 0 for `<device number>` does not work, try 2 or plugging into another usb slot.
