@@ -7,8 +7,8 @@ using namespace cv;
 
 int main(int argc, char** argv) {
     // Check for the correct number of arguments
-    if (argc != 4) {
-        printf("Usage: %s <device number> <capture interval (seconds)> <total duration (seconds)>\n", argv[0]);
+    if (argc != 5) {
+        printf("Usage: %s <device number> <capture interval (seconds)> <total duration (seconds)> <filename>\n", argv[0]);
         return -1;
     }
 
@@ -16,6 +16,7 @@ int main(int argc, char** argv) {
     int deviceNumber = atoi(argv[1]);
     int captureInterval = atoi(argv[2]);
     int totalDuration = atoi(argv[3]);
+    char* fileName = argv[4];
     
     // Open the video capture device
     VideoCapture cap(deviceNumber);
@@ -27,7 +28,7 @@ int main(int argc, char** argv) {
     // Define the codec and create a VideoWriter object
     int frameWidth = cap.get(CAP_PROP_FRAME_WIDTH);
     int frameHeight = cap.get(CAP_PROP_FRAME_HEIGHT);
-    VideoWriter video("timelapse.avi", VideoWriter::fourcc('M', 'J', 'P', 'G'), 10, Size(frameWidth, frameHeight));
+    VideoWriter video(fileName, VideoWriter::fourcc('M', 'J', 'P', 'G'), 10, Size(frameWidth, frameHeight));
     
     if (!video.isOpened()) {
         printf("Error: Could not open the video file for writing.\n");
